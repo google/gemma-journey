@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: 11af62ea8c85e7144883ecd05f1c8fb7
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BODY_Original
+    second: {fileID: 2100000, guid: 39eaf697c6c45184db680a138099ffcb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EYES_Black
+    second: {fileID: 2100000, guid: 56d21387ce0956e40b41e610df20bcc2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tweed_Bottoms1
+    second: {fileID: 2100000, guid: f3678d99b4879fe45b4cd56020ce0515, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tweedjacket
+    second: {fileID: 2100000, guid: 7c3d65559f3d8f441942dd02cec66be2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _AviatorFrame_Gold
+    second: {fileID: 2100000, guid: abdd45b50e72c34439e2c860fa535f83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _FlatCap
+    second: {fileID: 2100000, guid: f21d445fb167fb44ebe540d0740fe7f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Glasses_Lens_Clear
+    second: {fileID: 2100000, guid: a4dae0410c6bec849ab1520a8122bfb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _NS_Tshirt_Burgundy
+    second: {fileID: 2100000, guid: d1515f3a9d42bcb4aa774936e881f3ec, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DenimJacket_V002_TweedJacxket_BaseColor
+    second: {fileID: 2800000, guid: 866846820cbba6d4cb76f5486bc03446, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DenimJacket_V002_TweedJacxket_Normal
+    second: {fileID: 2800000, guid: f118de3a731c88e469e43e30a124b70d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DenimJacket_V002_TweedJacxket_OcclusionRoughnessMetallic
+    second: {fileID: 2800000, guid: 68ccda03f5e1afb49b1120a2c74df999, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Flatcap_Burgundy
+    second: {fileID: 2800000, guid: 5e1aa3d7bf29da343b328f8bb4e3e6af, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Flatcap_Normal
+    second: {fileID: 2800000, guid: 44c8814f7db58dd4cb046904ff12218c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Flatcap_OcclusionRoughnessMetallic
+    second: {fileID: 2800000, guid: f48a0430b739a414796b734951024de7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Original_Android_NeutralPose_V001_M_Body_BaseColor
+    second: {fileID: 2800000, guid: c4eaaee882d22d5429fe956599ad184c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Original_Android_NeutralPose_V001_M_Body_OcclusionRoughnessMetallic
+    second: {fileID: 2800000, guid: dab7e2d204e4ce54485d5f3317dd5e51, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PJs_TweedBot_BaseColor
+    second: {fileID: 2800000, guid: a41a234101b62d949a86b2570e47df1e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PJs_TweedBot_Normal
+    second: {fileID: 2800000, guid: ab32ea4889438c043afe9b8cc55e1b0a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PJs_TweedBot_OcclusionRoughnessMetallic
+    second: {fileID: 2800000, guid: 02811d6c425eaa9468667ef922758b92, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tshirt_Tshirt_V003_Burgundy
+    second: {fileID: 2800000, guid: 7bf56cc52edaae042958759761b004f7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tshirt_Tshirt_V003_Normal
+    second: {fileID: 2800000, guid: 56f927e02f2caa94daba5e165cec7354, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tshirt_Tshirt_V003_OcclusionRoughnessMetallic
+    second: {fileID: 2800000, guid: 8c57e0b1658d38540ae235b42092961c, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 1
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

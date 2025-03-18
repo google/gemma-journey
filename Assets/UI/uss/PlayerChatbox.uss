@@ -1,0 +1,39 @@
+#container {
+    flex-grow: 1;
+    background-color: rgb(31, 77, 238);
+    border-top-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    background-size: 128% 100%;
+    left: auto;
+    position: relative;
+    font-size: 14px;
+    -unity-font-definition: resource('Fonts/NotoSans-Regular');
+    border-left-width: 0;
+    align-self: flex-end;
+    align-items: flex-end;
+    min-width: auto;
+    max-width: 70%;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    padding-top: 32px;
+    padding-right: 24px;
+    padding-bottom: 32px;
+    padding-left: 24px;
+    margin-top: 20px;
+}
+
+#label {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    position: relative;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}

@@ -1,0 +1,30 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="NpcChatbox" src="project://database/Assets/UI/uxml/NpcChatbox.uxml?fileID=9197481963319205126&amp;guid=a83619ee5e9922541b7b9d61b27d1829&amp;type=3#NpcChatbox" />
+    <engine:Template name="PlayerChatbox" src="project://database/Assets/UI/uxml/PlayerChatbox.uxml?fileID=9197481963319205126&amp;guid=02da6e9dc249edc44afb6058f192cc5e&amp;type=3#PlayerChatbox" />
+    <engine:Template name="NpcThinkingBox" src="project://database/Assets/UI/uxml/NpcThinkingBox.uxml?fileID=9197481963319205126&amp;guid=ec98404849072074abb1a052e78975b9&amp;type=3#NpcThinkingBox" />
+    <Style src="project://database/Assets/UI/uss/NpcThinkingBox.uss?fileID=7433441132597879392&amp;guid=14601fe61077ac04592456905cf8fbc2&amp;type=3#NpcThinkingBox" />
+    <Style src="project://database/Assets/ChatbotTest/UI/uss/ChatbotTestPanel.uss?fileID=7433441132597879392&amp;guid=da514b70d5b7c064dbfc0e41d0232ae1&amp;type=3#ChatbotTestPanel" />
+    <engine:VisualElement picking-mode="Ignore" name="container">
+        <engine:VisualElement name="chat-panel" class="transition-long" style="background-color: rgb(19, 21, 26); border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom-right-radius: 16px; border-bottom-left-radius: 16px; width: 55%; height: auto; position: absolute; bottom: 30px; right: 40px; top: 120px;">
+            <engine:VisualElement name="top-container">
+                <engine:Label text="NPCName" name="npc-name" style="font-size: 18px; -unity-font-style: bold;" />
+                <engine:Button name="button-leave" style="align-items: center; justify-content: center;">
+                    <engine:VisualElement style="background-image: url(&quot;project://database/Assets/UI/assets/close.png?fileID=2800000&amp;guid=ff86c87e1492f714cb7f369b73a4d30c&amp;type=3#close&quot;); width: 14px; height: 14px; position: relative;" />
+                </engine:Button>
+            </engine:VisualElement>
+            <engine:VisualElement name="bottom-container">
+                <engine:VisualElement name="player-input-container">
+                    <engine:TextField placeholder-text="Type your message..." name="player-text-container" hide-placeholder-on-focus="true" style="flex-shrink: 1; flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+                    <engine:Button name="button-submit" class="qwe">
+                        <engine:VisualElement name="icon" class="qwe" />
+                    </engine:Button>
+                </engine:VisualElement>
+                <engine:ScrollView name="chat-container" horizontal-scroller-visibility="Hidden" class="qwe">
+                    <engine:Instance template="NpcChatbox" />
+                    <engine:Instance template="PlayerChatbox" />
+                    <engine:Instance template="NpcThinkingBox" />
+                </engine:ScrollView>
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

@@ -1,0 +1,40 @@
+#container {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#modal {
+    width: 60%;
+    height: 60%;
+    background-color: rgb(0, 0, 0);
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    background-image: url("project://database/Assets/UI/assets/tutorial_background.png?fileID=2800000&guid=4c7f9200345910b4cabbf395f2e422f9&type=3#tutorial_background");
+}
+
+#right-container {
+    justify-content: flex-end;
+}
+
+#left-container {
+    width: 350px;
+    justify-content: space-between;
+}
+
+#intro-container {
+    flex-grow: 1;
+}
+
+#button-start {
+    width: 145px;
+}

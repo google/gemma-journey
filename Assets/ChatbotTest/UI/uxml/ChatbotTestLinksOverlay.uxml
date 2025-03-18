@@ -1,0 +1,22 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/uss/TextStyle.uss?fileID=7433441132597879392&amp;guid=7068a08247347a34c83208940f624e99&amp;type=3#TextStyle" />
+    <Style src="project://database/Assets/UI/uss/Button.uss?fileID=7433441132597879392&amp;guid=7aa0449acf503f94d8f4c4deec340154&amp;type=3#Button" />
+    <Style src="project://database/Assets/UI/uss/ControlOverlay.uss?fileID=7433441132597879392&amp;guid=11c24e30de7450245b843c0dafb584af&amp;type=3#ControlOverlay" />
+    <engine:VisualElement name="container" picking-mode="Ignore">
+        <engine:VisualElement enabled="true" picking-mode="Ignore" name="top-control">
+            <engine:Button text="Exit game" name="button-exit" class="secondaryButton" />
+            <engine:Button name="button-sound" class="button-sound-normal secondaryButton button-sound-active">
+                <engine:VisualElement name="icon" />
+            </engine:Button>
+        </engine:VisualElement>
+        <engine:VisualElement name="bottom-control">
+            <engine:VisualElement style="justify-content: flex-end;">
+                <engine:VisualElement picking-mode="Ignore" name="text-container">
+                    <engine:Label text="Privacy Policy" name="privacy-policy" class="text" />
+                    <engine:Label text="Terms of Use" name="terms-of-use" class="text" />
+                    <engine:Label text="OSS License" name="oss" class="text" />
+                </engine:VisualElement>
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

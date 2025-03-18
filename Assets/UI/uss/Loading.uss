@@ -1,0 +1,8 @@
+#container {
+    flex-grow: 1;
+    align-items: center;
+    align-content: auto;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    background-image: url("project://database/Assets/UI/assets/LOADER/LOADER%20_00000.jpg?fileID=2800000&guid=84237bd0b681ffd4b9f15694962e14e1&type=3#LOADER _00000");
+}
