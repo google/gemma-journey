@@ -80,25 +80,5 @@ namespace GoogleDeepMind.GemmaSampleGame
             }
         }
 
-        private void OnGUI()
-        {
-            if (playerManager == null) return;
-
-            // Display simple instructions in the top-left corner
-            GUILayout.BeginArea(new Rect(10, 10, 300, 100));
-            GUILayout.Label($"Press {spawnPlayerKey} to spawn player");
-            GUILayout.Label($"Press {cycleSpawnPointsKey} to cycle spawn points");
-
-            if (playerManager.SpawnPoints.Count > 0 && currentSpawnPointIndex < playerManager.SpawnPoints.Count)
-            {
-                GUILayout.Label($"Current spawn point: {playerManager.SpawnPoints[currentSpawnPointIndex].SpawnPointId}");
-            }
-            else
-            {
-                GUILayout.Label("No spawn points available");
-            }
-
-            GUILayout.EndArea();
-        }
     }
 }

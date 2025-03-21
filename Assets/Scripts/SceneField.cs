@@ -42,6 +42,7 @@ namespace GoogleDeepMind.GemmaSampleGame
         }
     }
 
+/*
 #if UNITY_EDITOR
 [CustomPropertyDrawer(typeof(SceneField))]
 public class SceneFieldPropertyDrawer : PropertyDrawer
@@ -65,4 +66,5 @@ public class SceneFieldPropertyDrawer : PropertyDrawer
     }
 }
 #endif
+*/
 }

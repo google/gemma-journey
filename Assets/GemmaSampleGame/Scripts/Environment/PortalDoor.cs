@@ -167,7 +167,7 @@ namespace GoogleDeepMind.GemmaSampleGame
                 }
                 for (int i = 0; i < 4; i++)
                 {
-                    normalizedScreenSpaceCorners[i].x = screenSpaceCorners[i].x / renderTextureSize.x;
+                    normalizedScreenSpaceCorners[i].x = screenSpaceCorners[i].x / Screen.width;
                     normalizedScreenSpaceCorners[i].y = screenSpaceCorners[i].y / Screen.height;
                 }
 

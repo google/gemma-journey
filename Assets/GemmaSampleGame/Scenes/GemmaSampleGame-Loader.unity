@@ -246,7 +246,7 @@ MonoBehaviour:
   portalDoorNextRoom: {fileID: 316356512}
   isVisible: 1
   portalActivationDelay: 1
-  showDebugHUD: 1
+  showDebugHUD: 0
   debugTextColor: {r: 0, g: 1, b: 0, a: 1}
   debugOffset: {x: 10, y: 60}
 --- !u!1001 &316356510
@@ -1538,7 +1538,7 @@ MonoBehaviour:
       Enabled: 1
   portalManager: {fileID: 306461641}
   playerManager: {fileID: 1824474590}
-  showDebugHUD: 1
+  showDebugHUD: 0
   debugTextColor: {r: 1, g: 1, b: 1, a: 1}
   debugBackgroundColor: {r: 0, g: 0, b: 0, a: 0.7}
   fontSize: 16
@@ -1592,7 +1592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 1903507201407540641, guid: 9e4046ecdf28c4c47a7a34993d9ce2e4, type: 3}
   lifetimeScope: {fileID: 0}
-  showDebugHUD: 1
+  showDebugHUD: 0
   debugTextColor: {r: 1, g: 1, b: 1, a: 1}
   debugBackgroundColor: {r: 0, g: 0, b: 0, a: 0.7}
   fontSize: 16
@@ -2082,6 +2082,10 @@ PrefabInstance:
       propertyPath: portalCamera
       value: 
       objectReference: {fileID: 1362357567}
+    - target: {fileID: 4196121853641850223, guid: 31a5e38a23904dd4c88571a8b0f1a2aa, type: 3}
+      propertyPath: showDebugHUD
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4196121853641850223, guid: 31a5e38a23904dd4c88571a8b0f1a2aa, type: 3}
       propertyPath: portalViewMask.m_Bits
       value: 65
