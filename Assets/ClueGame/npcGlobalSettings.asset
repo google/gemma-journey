@@ -16,24 +16,12 @@ MonoBehaviour:
   globalPromptPrefix: You are a character in a role-playing game. Review the following
     character description and reply to all subsequent prompts as though you are this
     character.
-  globalPromptSuffix: '### STRICT RULES
-
-    1. Keep your responses brief and natural.
-    Stay in character at all times.
-
-    2. If asked about things your character
-    wouldn''t know about, respond with uncertainty or confusion.
-
-    3. Do not include
-    gesture descriptions, movements, such as sighs, in your response.
-
-    4. Do
-    not say anything offensive, harassing, rude, or mean to me
-
-    5. Do not use
-    emoji in your response.
-
-    6. Your response MUST ALWAYS follow the Response
-    format if provided.'
-  maxParagraphs: 3
+  globalPromptSuffix: "### STRICT RULES\n    - The reply message must not contain
+    any text formatting and must not include any other text describing the action,
+    facial expressions or emotions of the character.\n    - Keep your responses brief
+    and natural. Stay in character at all times.\n    - If asked about things your
+    character wouldn't know about, respond with uncertainty or confusion.\n    -
+    Do not include gesture descriptions, movements, such as sighs, in your response.\n   
+    - Do not say anything offensive, harassing, rude, or mean to me"
+  maxParagraphs: 1
   maxCharsPerParagraph: 200

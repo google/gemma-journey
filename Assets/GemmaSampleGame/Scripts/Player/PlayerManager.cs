@@ -260,7 +260,7 @@ namespace GoogleDeepMind.GemmaSampleGame
             {
                 virtualCamera.Follow = playerTransform;
                 // Set this camera as the active camera
-                virtualCamera.Priority = 100;
+                virtualCamera.Priority = -1;
             }
 
             return currentPlayer;

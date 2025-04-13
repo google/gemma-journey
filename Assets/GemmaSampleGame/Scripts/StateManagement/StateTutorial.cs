@@ -40,6 +40,7 @@ namespace GoogleDeepMind.GemmaSampleGame.StateManagement
 
             Debug.Log("This would be a good time to spawn the player.");
             playerManager.SpawnPlayer();
+            _inputManager.AddInput(new InputDoor(InputDoor.ActionType.Show));
         }
 
         public override void UpdateState()

@@ -184,7 +184,9 @@ namespace GoogleDeepMind.GemmaSampleGame
          */
         public void OnInteract(GameObject gameObject)
         {
+            fancam.Lens = LensSettings.FromCamera(Camera.main);;
             fancam.enabled = true;
+
             stateInputManager.AddInput(new StateManagement.InputInteract(this));
 
             // Set UI elements

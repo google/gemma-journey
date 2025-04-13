@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cc32e080309644f859f34011e9248e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localSetting: {fileID: 11400000, guid: 23886185a9b452444aedddaacddc3159, type: 2}
+  localSetting: {fileID: 11400000, guid: 7dd688cad945b0a4882f19633977eefa, type: 2}
   localSettingFilename: Cook
 --- !u!1 &3788808697219800796
 GameObject:

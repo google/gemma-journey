@@ -178,7 +178,7 @@ namespace GoogleDeepMind.GemmaSampleGame.StateManagement
             base.TransitionOutDone();
             if (_isPassed)
             {
-                _levelManager?.CurrentRoomManager?.DoorManager?.Open();
+                _inputManager.AddInput(new InputDoor(InputDoor.ActionType.Open));
             }
         }
     }

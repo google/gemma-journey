@@ -15,6 +15,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 using VContainer;
+using GoogleDeepMind.GemmaSampleGame.StateManagement;
+using Cysharp.Threading.Tasks;
 
 namespace GoogleDeepMind.GemmaSampleGame
 {
@@ -25,6 +27,7 @@ namespace GoogleDeepMind.GemmaSampleGame
         [SerializeField] public bool isActive = false;
         [SerializeField] public LayerMask playerLayer;
         [SerializeField] private BoxCollider triggerVolume;
+        [SerializeField] private Collider doorCollider;
 
         [Header("Portal View")]
         [SerializeField] private Camera portalCamera;
@@ -39,11 +42,12 @@ namespace GoogleDeepMind.GemmaSampleGame
         [SerializeField] private LayerMask portalCameraMask;
 
         private IRoomWallsRegistry registry;
-
+        private StateInputManager stateInputManager;
         [Inject]
-        public void Construct(IRoomWallsRegistry registry)
+        public void Construct(IRoomWallsRegistry registry, StateInputManager stateInputManager)
         {
             this.registry = registry;
+            this.stateInputManager = stateInputManager;
         }
 
         [Header("Debug")]
@@ -52,6 +56,7 @@ namespace GoogleDeepMind.GemmaSampleGame
         private GUIStyle debugStyle;
         private Vector2 debugOffset = new Vector2(610, 10);
         private float lineHeight = 20f;
+        private Vector2 buttonSize = new Vector2(100, 40);
 
         // Animation parameter hashes
         private int isOpenHash = Animator.StringToHash("isOpen");
@@ -64,6 +69,8 @@ namespace GoogleDeepMind.GemmaSampleGame
         private Vector2[] normalizedScreenSpaceCorners = new Vector2[4];
         private Mesh quadMesh;
         private Vector2[] originalUVs;
+
+        private bool isRose = false;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -78,9 +85,6 @@ namespace GoogleDeepMind.GemmaSampleGame
             {
                 portalCameraMask = LayerMask.GetMask("Player");
             }
-
-            // Initialize the portal state
-            SetPortalActive(isActive);
 
             // Cache render texture size
             if (portalRenderTexture != null)
@@ -226,11 +230,22 @@ namespace GoogleDeepMind.GemmaSampleGame
                 }
             }
 
+            if (doorCollider != null)
+            {
+                doorCollider.isTrigger = active;
+            }
+
             // Enable/disable portal camera
             if (portalCamera != null)
             {
                 portalCamera.enabled = active;
             }
+        }
+
+        public async void ActivatePortal()
+        {
+            await UniTask.WaitUntil(() => isRose);
+            SetPortalActive(true);
         }
 
         /// <summary>
@@ -243,6 +258,7 @@ namespace GoogleDeepMind.GemmaSampleGame
             if (animator != null)
             {
                 animator.SetBool(isVisibleHash, visible);
+                isRose = false;
                 Debug.Log($"Set animator visibility parameter to: {visible}");
             }
 
@@ -363,6 +379,11 @@ namespace GoogleDeepMind.GemmaSampleGame
             UpdateCameraMasks(newMainCameraMask, newPortalCameraMask);
         }
 
+        private void Rise()
+        {
+            isRose = true;
+        }
+
         void OnGUI()
         {
             if (!showDebugHUD) return;
@@ -416,6 +437,12 @@ namespace GoogleDeepMind.GemmaSampleGame
             // Display screen dimensions for reference
             yPos += lineHeight * 2;
             GUI.Label(new Rect(xPos, yPos, 500, lineHeight), $"Screen Dimensions: {Screen.width}x{Screen.height}", debugStyle);
+
+            yPos += lineHeight;
+            if (GUI.Button(new Rect(xPos, yPos, buttonSize.x, buttonSize.y), "Open"))
+            {
+                stateInputManager.AddInput(new InputDoor(InputDoor.ActionType.Open));
+            }
         }
     }
 }

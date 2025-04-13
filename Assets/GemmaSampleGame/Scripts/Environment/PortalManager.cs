@@ -15,6 +15,8 @@
 using UnityEngine;
 using VContainer;
 using System;
+using Cysharp.Threading.Tasks;
+using System.Threading.Tasks;
 
 namespace GoogleDeepMind.GemmaSampleGame
 {
@@ -26,6 +28,7 @@ namespace GoogleDeepMind.GemmaSampleGame
         private PortalDoor portalDoorNextRoomComponent;
         [SerializeField] private bool isVisible = false;
         [SerializeField] private float portalActivationDelay = 1.0f;
+        [SerializeField] private float portalVisibilityDelay = 2.0f;
 
         [Header("Debug")]
         [SerializeField] private bool showDebugHUD = true;
@@ -116,10 +119,18 @@ namespace GoogleDeepMind.GemmaSampleGame
                 if (stateInputManager.HasInput<StateManagement.InputDoor>())
                 {
                     var input = stateInputManager.GetLastInput<StateManagement.InputDoor>();
-                    if (input.Type == StateManagement.InputDoor.ActionType.Enter && isVisible)
+                    if (input.Type == StateManagement.InputDoor.ActionType.Open && isVisible)
                     {
-                        // Player has entered the door/portal area
                         ActivatePortal();
+                    }
+                    else if (input.Type == StateManagement.InputDoor.ActionType.Enter)
+                    {
+                        portalDoorComponent.SetPortalActive(false);
+                        SetPortalVisibility(false);
+                    }
+                    else if (input.Type == StateManagement.InputDoor.ActionType.Show)
+                    {
+                        ShowPortal();
                     }
                 }
 
@@ -247,6 +258,7 @@ namespace GoogleDeepMind.GemmaSampleGame
         /// </summary>
         public void OnPlayerEnteredPortal()
         {
+            Debug.Log("PortalManager OnPlayerEnteredPortal called");
             if (isVisible)
             {
                 Debug.Log("Player entered portal - activating portal");
@@ -298,15 +310,9 @@ namespace GoogleDeepMind.GemmaSampleGame
 
             if (portalDoor != null)
             {
-                // Set the GameObject active state
-                portalDoor.SetActive(visible);
-
                 // If the portal has a PortalDoor component, update its state
                 if (portalDoorComponent != null)
                 {
-                    // Set the active state for effects
-                    portalDoorComponent.SetPortalActive(visible);
-
                     // Set the visibility parameter in the animator
                     portalDoorComponent.SetVisibility(visible);
                 }
@@ -325,7 +331,7 @@ namespace GoogleDeepMind.GemmaSampleGame
                 Debug.Log("Portal activated - preparing for room transition");
 
                 // Activate the portal visual effects
-                portalDoorComponent.SetPortalActive(true);
+                portalDoorComponent.ActivatePortal();
 
                 // Invoke the portal activated event
                 OnPortalActivated?.Invoke();
@@ -339,6 +345,18 @@ namespace GoogleDeepMind.GemmaSampleGame
                     // After changing the level, reposition the portal at the new room's back anchor
                     PositionPortalAtCurrentRoom();
                 }
+            }
+        }
+
+        private async void ShowPortal()
+        {
+            isVisible = true;
+            Debug.Log("Portal shown");
+            if (portalDoorComponent != null)
+            {
+                await Task.Delay(TimeSpan.FromSeconds(portalVisibilityDelay));
+                portalDoorComponent.SetVisibility(true);
+                return;
             }
         }
 

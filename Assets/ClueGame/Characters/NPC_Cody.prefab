@@ -183,7 +183,7 @@ PrefabInstance:
     - target: {fileID: 5394616931733211816, guid: d14c00e8f692e9744acd49b37391f791, type: 3}
       propertyPath: _botAnimationHandler
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 138371208815216946}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1090903556200976369, guid: d14c00e8f692e9744acd49b37391f791, type: 3}

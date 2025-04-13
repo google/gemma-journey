@@ -32,6 +32,10 @@ namespace GoogleDeepMind.GemmaSampleGame.StateManagement
          */
         public enum ActionType
         {
+            /** Request to show a door */
+            Show,
+            /** Request to hide a door */
+            Hide,
             /** Request to open a door */
             Open,
             /** Request to close a door */
@@ -53,6 +57,11 @@ namespace GoogleDeepMind.GemmaSampleGame.StateManagement
         public InputDoor(ActionType type)
         {
             Type = type;
+        }
+
+        public override string ToString()
+        {
+            return $"InputDoor: {Type}";
         }
     }
 

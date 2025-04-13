@@ -90,6 +90,10 @@ namespace GoogleDeepMind.GemmaSampleGame.StateManagement
                     }
                 }
             }
+            else if (_inputManager.HasInput<InputLevelLoaded>())
+            {
+                _inputManager.AddInput(new InputDoor(InputDoor.ActionType.Show));
+            }
         }
 
         /**

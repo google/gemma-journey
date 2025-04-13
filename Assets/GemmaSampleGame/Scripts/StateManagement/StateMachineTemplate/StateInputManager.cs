@@ -61,7 +61,7 @@ namespace GoogleDeepMind.GemmaSampleGame.StateManagement
      */
     public void AddInput(StateInput input)
     {
-      Debug.Log($"Input added: {input.GetType()}");
+      Debug.Log($"Input added: {input.GetType()}\n{input}");
       _inputs[_inputIndex].Add(input);
     }
 
