@@ -1,0 +1,70 @@
+name: Unity CI/CD
+
+on:
+  push:
+    branches: [ jetha ] # Trigger on pushes to the main branch
+    tags:
+      - 'buildtest'
+      - 'v*.*.*' # Trigger on version tags like v1.0.0
+  pull_request:
+    branches: [ jetha ] # Trigger on pull requests to the main branch
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  build-windows: # Renamed job
+    name: Build Unity Project (Windows) # Updated name
+    runs-on: ubuntu-latest # Unity builds are generally faster on Linux runners
+    steps:
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true # Required for Unity projects using Git LFS
+
+      # Cache
+      - name: Cache Library folder
+        uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+      # Unity Builder
+      - name: Build project
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          targetPlatform: StandaloneWindows64
+          buildName: GemmaJourney # Name of the executable
+
+      # Output Build Path
+      - name: Get Build Output Path
+        id: build_path
+        run: echo "path=$(ls -d build/StandaloneWindows64/* | head -n 1)" >> $GITHUB_OUTPUT
+
+      # Zip build
+      - name: Zip Build Artifact
+        run: |
+          cd ${{ steps.build_path.outputs.path }}
+          zip -r ../../windows-build.zip .
+
+      # Upload Artifact (Optional, but good for debugging/accessing build from non-release runs)
+      - name: Upload Build Artifact (Zip)
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-windows-zipped
+          path: windows-build.zip
+
+      # Create Release and Upload
+      - name: Create Release
+        if: startsWith(github.ref, 'refs/tags/v') # Only run for tags starting with 'v'
+        uses: softprops/action-gh-release@v1
+        with:
+          files: windows-build.zip # Attach the zip file to the release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, no need to create it
