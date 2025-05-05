@@ -49,9 +49,7 @@ jobs:
 
       # Zip build
       - name: Zip Build Artifact
-        run: |
-          cd ${{ steps.build_path.outputs.path }}
-          zip -r ../../windows-build.zip .
+        run: zip -r windows-build.zip ${{ steps.build_path.outputs.path }}
 
       # Upload Artifact (Optional, but good for debugging/accessing build from non-release runs)
       - name: Upload Build Artifact (Zip)
