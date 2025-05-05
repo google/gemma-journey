@@ -1,0 +1,119 @@
+name: Unity CI/CD
+
+on:
+  push:
+    branches: [ main ] # Trigger on pushes to the main branch
+    tags:
+      - 'buildtest'
+      - 'v*.*.*' # Trigger on version tags like v1.0.0
+  pull_request:
+    branches: [ main ] # Trigger on pull requests to the main branch
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  build-windows: # Renamed job
+    name: Build Unity Project (Windows) # Updated name
+    runs-on: ubuntu-22.04-32core
+    permissions:
+      contents: write # Grant permission to create releases
+    steps:
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true # Required for Unity projects using Git LFS
+
+      # Cache
+      - name: Cache Library folder
+        uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+      # Unity Builder
+      - name: Build project
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          targetPlatform: StandaloneWindows64
+          buildName: GemmaJourney # Name of the executable
+
+      # Output Build Path
+      - name: Get Build Output Path
+        id: build_path
+        run: echo "path=$(ls -d build/StandaloneWindows64/* | head -n 1)" >> $GITHUB_OUTPUT
+
+      # Download Gemma Model from Kaggle (Moved After Build)
+      - name: Download Gemma Model
+        run: |
+          echo "Installing Kaggle CLI..."
+          pip install kaggle --upgrade
+          echo "Configuring Kaggle credentials..."
+          mkdir -p ~/.kaggle
+          echo '{"username":"${{ secrets.KAGGLE_USERNAME }}","key":"${{ secrets.KAGGLE_KEY }}"}' > ~/.kaggle/kaggle.json
+          chmod 600 ~/.kaggle/kaggle.json
+          echo "Downloading Gemma model (gemma-3.tar.gz)..."
+          # Use the correct command structure including version number /1
+          kaggle models instances versions download google/gemma-3/gemmaCpp/3.0-4b-it-sfp/1 -p . --quiet
+          if [ ! -f "gemma-3.tar.gz" ]; then
+            echo "Error: Could not find downloaded model file gemma-3.tar.gz."
+            exit 1
+          fi
+          echo "Model download complete."
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+
+      # Extract and Copy Gemma Model into Build Output using Sudo
+      - name: Extract and Copy Gemma Model into Build Output
+        run: |
+          FINAL_TARGET_DIR="${{ steps.build_path.outputs.path }}/GemmaJourney_Data/StreamingAssets/gemma-3.0-4b"
+
+          sudo mkdir -p "$FINAL_TARGET_DIR"
+
+          echo "Extracting gemma-3.tar.gz into $FINAL_TARGET_DIR..."
+          if [ -f "gemma-3.tar.gz" ]; then
+            echo "Setting permissions on $FINAL_TARGET_DIR..."
+            sudo chmod -R 755 "$FINAL_TARGET_DIR"
+            sudo tar -xzf gemma-3.tar.gz -C "$FINAL_TARGET_DIR" # Added sudo here
+            rm *.tar.gz # Keep rm as is, should have permission in current dir
+            echo "Extraction complete."
+            sudo chmod -R 755 "$FINAL_TARGET_DIR"
+            echo "Changing ownership of $FINAL_TARGET_DIR..."
+            sudo chown -R $(id -u):$(id -g) "$FINAL_TARGET_DIR" # Change ownership back to runner user
+            echo "Ownership changed."
+          else
+            echo "Error: Could not find downloaded model file gemma-3.tar.gz for extraction."
+            exit 1
+          fi
+
+          echo "Model successfully placed in build output."
+        env:
+          # Pass build path to env if needed, though direct usage should work
+          BUILD_OUTPUT_PATH: ${{ steps.build_path.outputs.path }}
+
+      # Zip build
+      - name: Zip Build Artifact
+        run: zip -r windows-build.zip ${{ steps.build_path.outputs.path }}
+
+      # Upload Artifact (Optional, but good for debugging/accessing build from non-release runs)
+      - name: Upload Build Artifact (Zip)
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-windows-zipped
+          path: windows-build.zip
+
+      # Create Release and Upload
+      - name: Create Release
+        if: startsWith(github.ref, 'refs/tags/v') # Only run for tags starting with 'v'
+        uses: softprops/action-gh-release@v1
+        with:
+          files: windows-build.zip # Attach the zip file to the release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, no need to create it
