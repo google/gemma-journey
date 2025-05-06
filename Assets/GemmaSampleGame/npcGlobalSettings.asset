@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a8c5294dc48614f813219f60dd8a22, type: 3}
+  m_Name: npcGlobalSettings
+  m_EditorClassIdentifier: 
+  globalLeavingConversationPrompt: 
+  globalPromptPrefix: You are a character in a role-playing game. Review the following
+    character description and reply to all subsequent prompts as though you are this
+    character.
+  globalPromptSuffix: "### STRICT RULES\n    - The reply message must not contain
+    any text formatting and must not include any other text describing the action,
+    facial expressions or emotions of the character.\n    - Keep your responses brief
+    and natural. Stay in character at all times.\n    - If asked about things your
+    character wouldn't know about, respond with uncertainty or confusion.\n    -
+    Do not include gesture descriptions, movements, such as sighs, in your response.\n   
+    - Do not say anything offensive, harassing, rude, or mean to me"
+  maxParagraphs: 1
+  maxCharsPerParagraph: 200
+  NPCLocalSettingsToPrewarm:
+  - {fileID: 11400000, guid: 7dd688cad945b0a4882f19633977eefa, type: 2}
+  - {fileID: 11400000, guid: d455593a2954c464f92f7439d019555d, type: 2}
+  - {fileID: 11400000, guid: 7f4b6a7c52760dd43a67f33a0b2e181b, type: 2}

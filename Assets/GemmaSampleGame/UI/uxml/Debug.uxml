@@ -1,0 +1,26 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/uss/Debug.uss?fileID=7433441132597879392&amp;guid=a30420da1a8c76547bf7754062bb9bbe&amp;type=3#Debug" />
+    <engine:VisualElement picking-mode="Ignore" name="container" class="container slide-open" style="top: 30%; bottom: 30%;">
+        <engine:VisualElement name="VisualElement" style="background-color: rgba(0, 0, 0, 0.6); align-self: center; border-top-right-radius: 20px; border-bottom-right-radius: 20px; max-height: 800px;">
+            <engine:Label text="Name text&#10;" name="name-text" class="text" />
+            <engine:Label text="secret" name="secret-text" class="text" />
+            <engine:VisualElement name="VisualElement" style="flex-grow: 1; flex-direction: row;">
+                <engine:Button text="Open" name="open" class="button" />
+                <engine:Button text="Reset conversation" name="reset-conversation" class="button" />
+                <engine:Button text="Save conversation&#10;" name="dump-conversation" class="button" />
+            </engine:VisualElement>
+            <engine:VisualElement style="flex-direction: row; align-self: flex-start; min-height: 100px; max-height: 500px;">
+                <engine:ScrollView style="width: 300px; max-height: 300px;">
+                    <engine:Label text="prompt&#10;" name="prompt-text" class="text" style="flex-grow: 1;" />
+                </engine:ScrollView>
+                <engine:ScrollView name="ScrollView" style="width: 300px; max-height: 300px;">
+                    <engine:Label text="response" name="response-text" class="text" style="flex-grow: 1;" />
+                </engine:ScrollView>
+            </engine:VisualElement>
+            <engine:ScrollView style="width: 600px; max-height: 300px;">
+                <engine:Label text="status&#10;" name="status-text" class="text" />
+            </engine:ScrollView>
+        </engine:VisualElement>
+        <engine:VisualElement name="opener" class="opener" style="background-color: rgba(100, 233, 104, 0.61);" />
+    </engine:VisualElement>
+</engine:UXML>

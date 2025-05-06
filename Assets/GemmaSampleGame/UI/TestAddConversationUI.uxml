@@ -1,0 +1,12 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="VisualElement" style="flex-grow: 1; width: 100px;">
+        <engine:Button text="open&#10;" name="open" />
+        <engine:Button text="close" name="close" />
+        <engine:Button text="Add NPC" name="add-npc-button" />
+        <engine:Button text="Add Player" name="add-player-button" />
+        <engine:Button text="Clear&#10;" name="clear" />
+        <engine:Button text="Think&#10;" name="think" />
+        <engine:Button text="DoneThink&#10;" name="donethink" />
+        <engine:Button text="Scroll&#10;" name="scroll" />
+    </engine:VisualElement>
+</engine:UXML>

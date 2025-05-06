@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/GemmaSampleGame/Scenes/GemmaSampleGame-Loader.unity
+    guid: d31b091a0802a47469513f98bdaffdfc
+  - enabled: 1
+    path: Assets/GemmaSampleGame/Scenes/GemmaSampleGame-Start.unity
+    guid: 01273f0125ce3a74f81911067e400e47
+  - enabled: 1
+    path: Assets/GemmaSampleGame/Scenes/GemmaSampleGame-Room1.unity
+    guid: 3d50e80d52d2bfd4392e32e362dddb1b
+  - enabled: 1
+    path: Assets/GemmaSampleGame/Scenes/GemmaSampleGame-Room2.unity
+    guid: 67f6c7cb8a4f1644fa6b60aee4ff51d3
+  - enabled: 1
+    path: Assets/GemmaSampleGame/Scenes/GemmaSampleGame-Room3.unity
+    guid: 5cb218f0a270f014f9594dc315cd0ade
+  - enabled: 1
+    path: Assets/GemmaSampleGame/Scenes/GemmaSampleGame-End.unity
+    guid: 08b891cca058a6f4fbbb26935f8e468d
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_UseUCBPForAssetBundles: 0

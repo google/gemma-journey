@@ -1,0 +1,19 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/uss/TextStyle.uss?fileID=7433441132597879392&amp;guid=7068a08247347a34c83208940f624e99&amp;type=3#TextStyle" />
+    <Style src="project://database/Assets/UI/uss/Button.uss?fileID=7433441132597879392&amp;guid=7aa0449acf503f94d8f4c4deec340154&amp;type=3#Button" />
+    <Style src="project://database/Assets/UI/uss/MainMenu.uss?fileID=7433441132597879392&amp;guid=c822fdf8d60e7b94b95217d8a6e0827e&amp;type=3#MainMenu" />
+    <engine:VisualElement name="container">
+        <engine:VisualElement style="display: flex; visibility: visible; background-color: rgba(0, 0, 0, 0); flex-basis: 50%; flex-grow: 1; align-items: center; justify-content: center; align-self: auto;">
+            <engine:Label text="Gemma 3 Unity Game Demo" name="top-label" class="description" />
+            <engine:VisualElement style="width: 902px; height: 96px; background-image: url(&quot;project://database/Assets/UI/assets/Game%20title.png?fileID=2800000&amp;guid=3e5259f4cea53c54dab02446882d4140&amp;type=3#Game title&quot;); -unity-background-scale-mode: scale-to-fit;" />
+            <engine:Label text="Interact with lifelike NPCs with on-device AI dialogue powered by Gemma 3" name="description" class="description" />
+            <engine:VisualElement name="button-container">
+                <engine:Button name="button-start" class="testButton primaryButton">
+                    <engine:Label text="Play game" name="label" class="description" />
+                    <engine:VisualElement name="icon" />
+                </engine:Button>
+                <engine:Button text="Learn more" name="learn-more-button" class="textButton" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

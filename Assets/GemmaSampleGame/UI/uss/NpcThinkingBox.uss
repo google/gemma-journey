@@ -1,0 +1,50 @@
+.circle {
+    width: 10px;
+    height: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-image: url("project://database/Assets/GemmaSampleGame/UI/assets/thinking_gradient.png?fileID=2800000&guid=d9e2f4b745e07444b83c34694d53ee6a&type=3#thinking_gradient");
+}
+
+.slide-thinking {
+    background-color: rgb(33, 123, 254);
+    opacity: 0;
+    translate: 0 30px;
+    display: none;
+    height: 0;
+}
+
+.fade-dot {
+    opacity: 0;
+}
+
+#first-dot {
+    transition-duration: 900ms;
+    transition-delay: 100ms;
+}
+
+#second-dot {
+    transition-duration: 700ms;
+    transition-delay: 300ms;
+}
+
+#third-dot {
+    transition-duration: 500ms;
+    transition-delay: 500ms;
+}
+
+#dot-container {
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    background-color: rgb(26, 28, 36);
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 60px;
+    transition-duration: 2s;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}

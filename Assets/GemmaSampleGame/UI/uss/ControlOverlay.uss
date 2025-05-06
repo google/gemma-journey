@@ -1,0 +1,109 @@
+.text {
+    color: rgb(139, 153, 174);
+}
+
+.text:hover {
+    -unity-text-outline-width: 3px;
+    -unity-text-outline-color: rgb(139, 153, 174);
+}
+
+.control {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(31, 37, 51);
+    border-top-left-radius: 48px;
+    border-top-right-radius: 48px;
+    border-bottom-right-radius: 48px;
+    border-bottom-left-radius: 48px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    color: rgb(240, 243, 248);
+    -unity-text-align: middle-center;
+}
+
+.control-highlight {
+    background-color: rgb(33, 120, 254);
+}
+
+.button-sound-active {
+    background-color: rgb(31, 77, 238);
+}
+
+.button-sound-normal #icon {
+    background-image: url("project://database/Assets/GemmaSampleGame/UI/assets/volume_down_24px.png?fileID=2800000&guid=e34cc1a00d8c2e440bd12a017f208c22&type=3#volume_down_24px");
+    width: 24px;
+    height: 24px;
+}
+
+.button-sound-active #icon {
+    background-image: url("project://database/Assets/GemmaSampleGame/UI/assets/volume_up_24px.png?fileID=2800000&guid=07d21b2552312c846aeb24f63cd54e60&type=3#volume_up_24px");
+    width: 24px;
+    height: 24px;
+}
+
+.key-container {
+    flex-direction: row;
+    justify-content: center;
+}
+
+#container {
+    flex-grow: 0;
+    justify-content: space-between;
+    flex-basis: 100%;
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+}
+
+#top-control {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#bottom-control {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#control {
+    flex-direction: row-reverse;
+}
+
+#e-container {
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 80px;
+}
+
+#button-exit {
+    width: 150px;
+    height: 60px;
+}
+
+#button-sound {
+    width: 80px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+#wasd-container {
+    justify-content: flex-end;
+}
+
+#text-container {
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+#terms-of-use {
+    margin-right: 24px;
+    margin-left: 24px;
+}

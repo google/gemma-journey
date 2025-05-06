@@ -1,0 +1,45 @@
+#container {
+    flex-grow: 1;
+    background-color: rgb(26, 28, 36);
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    right: auto;
+    width: auto;
+    align-items: flex-start;
+    align-self: flex-start;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    padding-left: 24px;
+    min-width: auto;
+    max-width: 70%;
+    max-height: none;
+    position: relative;
+    padding-top: 32px;
+    padding-right: 24px;
+    padding-bottom: 32px;
+    border-bottom-left-radius: 24px;
+    flex-direction: row;
+}
+
+#icon {
+    width: 20px;
+    height: 20px;
+    background-image: url("project://database/Assets/GemmaSampleGame/UI/assets/android.png?fileID=2800000&guid=a24fcd1c68a727144a56fd05ae3c60b5&type=3#android");
+    -unity-background-scale-mode: scale-to-fit;
+    flex-shrink: 0;
+}
+
+#label {
+    font-size: 16px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 14px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    flex-shrink: 1;
+}

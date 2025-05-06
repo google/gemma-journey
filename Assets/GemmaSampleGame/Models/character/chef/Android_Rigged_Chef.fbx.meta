@@ -1,0 +1,591 @@
+fileFormatVersion: 2
+guid: e8af749f1c5325a468bc5fe60e471c5e
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BODY_Original
+    second: {fileID: 2100000, guid: 6a2277a5112ffa7489709fd2beb1e6d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CherfHat
+    second: {fileID: 2100000, guid: 3e9812e19d27a4d46bdb4eb79875b93e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EYES_Black
+    second: {fileID: 2100000, guid: dd25603c3d938624bbcad1f62b5669e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Apron
+    second: {fileID: 2100000, guid: 307b71ee1e8366a4b84a5c13cb1b34b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Jeans_Blue
+    second: {fileID: 2100000, guid: 5c89dc6d109b28647a30d8e190b259de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _NS_Tshirt_White
+    second: {fileID: 2100000, guid: 8d7b7e0891c54e84e9788055f532b45c, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: AND_Apron_Apron_BaseColor
+    second: {fileID: 2800000, guid: 4bee28d9d905cf648a34fbe4cedd9e3b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: AND_Apron_Apron_Normal
+    second: {fileID: 2800000, guid: 59812b136c678c7438bcb25f95e268dd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: AND_Apron_Apron_OcclusionRoughnessMetallic
+    second: {fileID: 2800000, guid: a2d83967a179cd64f95c9890caedaf50, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Original_Android_NeutralPose_V001_M_Body_BaseColor
+    second: {fileID: 2800000, guid: c40df5021642fee498c550e1e8bb3b20, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Original_Android_NeutralPose_V001_M_Body_OcclusionRoughnessMetallic
+    second: {fileID: 2800000, guid: c607742658b659b4585f26174aa1de06, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Trousers_Jeans_Blue_BaseColor
+    second: {fileID: 2800000, guid: e40df9c7920898a4ea9149f605675332, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Trousers_Jeans_Blue_Normal
+    second: {fileID: 2800000, guid: 8b57d2279bc46504183e7beb2b7932ba, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Trousers_Jeans_Blue_OcclusionRoughnessMetallic
+    second: {fileID: 2800000, guid: c20d3ff0b35729a439a77107d10415fc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tshirt_Tshirt_V003_BaseColor
+    second: {fileID: 2800000, guid: 7d599e226923e0345a808e900e613ac3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tshirt_Tshirt_V003_Normal
+    second: {fileID: 2800000, guid: 3d61245351e72bd44ba47f5af8f57d91, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tshirt_Tshirt_V003_OcclusionRoughnessMetallic
+    second: {fileID: 2800000, guid: 63efc62b5df65fd479312ac32f48c20f, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Root_SH_Jnt
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: left_Leg_Hip_SH_Jnt
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: right_Leg_Hip_SH_Jnt
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: left_Leg_Knee_SH_Jnt
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: right_Leg_Knee_SH_Jnt
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: left_Leg_Ankle_SH_Jnt
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: right_Leg_Ankle_SH_Jnt
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine_01_SH_Jnt
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine_02_SH_Jnt
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head_Top_SH_Jnt
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: left_Arm_Shoulder_SH_Jnt
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: right_Arm_Shoulder_SH_Jnt
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: left_Arm_Elbow_SH_Jnt
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: right_Arm_Elbow_SH_Jnt
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: left_Arm_Wrist_SH_Jnt
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: right_Arm_Wrist_SH_Jnt
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: left_Antenna_01_02_SH_Jnt
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: right_Antenna_01_02_SH_Jnt
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine_Top_SH_Jnt
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Android_Rigged_Chef(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Android_grp
+      parentName: Android_Rigged_Chef(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body
+      parentName: Android_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head
+      parentName: Android_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arms
+      parentName: Android_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: controlRig
+      parentName: Android_Rigged_Chef(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SingleHierarchy_Grp
+      parentName: controlRig
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Trajectory_Jnt
+      parentName: SingleHierarchy_Grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_SH_Jnt
+      parentName: Trajectory_Jnt
+      position: {x: -0, y: 0.032543745, z: 0}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_Leg_Hip_SH_Jnt
+      parentName: Root_SH_Jnt
+      position: {x: 0.0018939993, y: -0.016900003, z: 0}
+      rotation: {x: -0.005431827, y: 3.3260348e-19, z: 0.9999853, w: 6.123144e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_Leg_Knee_SH_Jnt
+      parentName: left_Leg_Hip_SH_Jnt
+      position: {x: -0.015416677, y: 2.220446e-18, z: 1.3877787e-19}
+      rotation: {x: -3.530801e-18, y: -0.06850437, z: -6.113046e-17, w: 0.9976508}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_Leg_Ankle_SH_Jnt
+      parentName: left_Leg_Knee_SH_Jnt
+      position: {x: -0.008454691, y: 1.11022296e-17, z: 1.110223e-18}
+      rotation: {x: -3.8629533e-18, y: 0.06308178, z: -6.111037e-17, w: 0.9980084}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_Leg_Ball_SH_Jnt
+      parentName: left_Leg_Ankle_SH_Jnt
+      position: {x: -0.0018465113, y: -8.881784e-18, z: 0.013761435}
+      rotation: {x: 2.1630147e-22, y: 0.70710856, z: 2.1630147e-22, w: 0.70710504}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_Leg_Toe_SH_Jnt
+      parentName: left_Leg_Ball_SH_Jnt
+      position: {x: -0.016397363, y: 2.220446e-18, z: 2.220446e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_Leg_Hip_SH_Jnt
+      parentName: Root_SH_Jnt
+      position: {x: 0.0018939993, y: 0.016900003, z: 0}
+      rotation: {x: 0.9999853, y: 1.091866e-23, z: 0.005431827, w: -1.837508e-15}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_Leg_Knee_SH_Jnt
+      parentName: right_Leg_Hip_SH_Jnt
+      position: {x: 0.015416677, y: 6.661338e-18, z: 0}
+      rotation: {x: -1.9234212e-19, y: -0.06850437, z: -1.7893464e-21, w: 0.9976508}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_Leg_Ankle_SH_Jnt
+      parentName: right_Leg_Knee_SH_Jnt
+      position: {x: 0.008454691, y: -1.5543122e-17, z: 8.3266725e-19}
+      rotation: {x: -1.8325613e-15, y: 0.06308178, z: 1.3584368e-16, w: 0.9980084}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_Leg_Ball_SH_Jnt
+      parentName: right_Leg_Ankle_SH_Jnt
+      position: {x: 0.0018465113, y: -8.437695e-17, z: -0.013761435}
+      rotation: {x: 1.4115822e-17, y: -0.70710504, z: 1.4115753e-17, w: 0.70710856}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_Leg_Toe_SH_Jnt
+      parentName: right_Leg_Ball_SH_Jnt
+      position: {x: -0.016397363, y: -1.2434498e-16, z: -5.5511148e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_01_SH_Jnt
+      parentName: Root_SH_Jnt
+      position: {x: -0.023333332, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_02_SH_Jnt
+      parentName: Spine_01_SH_Jnt
+      position: {x: -0.023333332, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_Top_SH_Jnt
+      parentName: Spine_02_SH_Jnt
+      position: {x: -0.023333332, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_Arm_Clavicle_SH_Jnt
+      parentName: Spine_Top_SH_Jnt
+      position: {x: -0.0013324469, y: -0.042291358, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_Arm_Shoulder_SH_Jnt
+      parentName: left_Arm_Clavicle_SH_Jnt
+      position: {x: -0.009768179, y: -0.009747135, z: 0.000041734344}
+      rotation: {x: 0.7007439, y: 0.0060597644, z: 0.0061151073, w: 0.71336097}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_Arm_Elbow_SH_Jnt
+      parentName: left_Arm_Shoulder_SH_Jnt
+      position: {x: -0.021651493, y: 3.8857806e-18, z: 7.9936054e-17}
+      rotation: {x: -0.00000071525557, y: 0.032644026, z: -0.000016590577, w: 0.9994671}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_Arm_Wrist_SH_Jnt
+      parentName: left_Arm_Elbow_SH_Jnt
+      position: {x: -0.01345453, y: 2.4980017e-18, z: -8.881784e-18}
+      rotation: {x: -0.70133156, y: -0.019978898, z: -0.01976094, w: 0.71228117}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_Arm_Clavicle_SH_Jnt
+      parentName: Spine_Top_SH_Jnt
+      position: {x: -0.0013324469, y: 0.042291358, z: 0}
+      rotation: {x: 0.7071068, y: 0.7071068, z: 4.3297806e-17, w: 4.3297806e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_Arm_Shoulder_SH_Jnt
+      parentName: right_Arm_Clavicle_SH_Jnt
+      position: {x: 0.01006949, y: 0.009763891, z: -0.000037487163}
+      rotation: {x: 0.7008574, y: 0.0064693964, z: 0.0065607405, w: 0.713242}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_Arm_Elbow_SH_Jnt
+      parentName: right_Arm_Shoulder_SH_Jnt
+      position: {x: 0.021651493, y: -3.8857806e-18, z: 0}
+      rotation: {x: -0.00000077486004, y: 0.032009505, z: -0.000019388264, w: 0.9994876}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_Arm_Wrist_SH_Jnt
+      parentName: right_Arm_Elbow_SH_Jnt
+      position: {x: 0.01345453, y: -8.3266725e-19, z: 4.4408918e-17}
+      rotation: {x: -0.70133156, y: -0.019978898, z: -0.01976094, w: 0.71228117}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head_Top_SH_Jnt
+      parentName: Spine_Top_SH_Jnt
+      position: {x: -0.04167256, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_Antenna_01_01_SH_Jnt
+      parentName: Head_Top_SH_Jnt
+      position: {x: -0.020320117, y: -0.00011962511, z: 0.0001832253}
+      rotation: {x: 0.00077140244, y: 0.0013203463, z: -0.50445604, w: 0.86343604}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_Antenna_01_02_SH_Jnt
+      parentName: left_Antenna_01_01_SH_Jnt
+      position: {x: -0.005448705, y: -0.00022442841, z: -7.2858384e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: left_Antenna_01_03_SH_Jnt
+      parentName: left_Antenna_01_02_SH_Jnt
+      position: {x: -0.0055068163, y: -0.000013040894, z: -5.551115e-19}
+      rotation: {x: 6.603912e-20, y: -6.5224913e-19, z: -0.023448406, w: 0.99972504}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_Antenna_01_01_SH_Jnt
+      parentName: Head_Top_SH_Jnt
+      position: {x: 0.020320117, y: -0.00011962511, z: 0.0001832253}
+      rotation: {x: -0.50445604, y: 0.86343604, z: 0.00077140244, w: 0.0013203463}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_Antenna_01_02_SH_Jnt
+      parentName: right_Antenna_01_01_SH_Jnt
+      position: {x: -0.005448705, y: -0.00022442841, z: -3.649858e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: right_Antenna_01_03_SH_Jnt
+      parentName: right_Antenna_01_02_SH_Jnt
+      position: {x: -0.0055068163, y: -0.000013040894, z: -3.4590384e-17}
+      rotation: {x: 6.1164434e-17, y: 2.2526984e-18, z: -0.023448406, w: 0.99972504}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Clothes_grp
+      parentName: Android_Rigged_Chef(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: NewClothes_grp
+      parentName: Clothes_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tshirt
+      parentName: NewClothes_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body
+      parentName: Tshirt
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sleeves
+      parentName: Tshirt
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Jeans
+      parentName: NewClothes_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Chef_grp
+      parentName: NewClothes_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ChefHat
+      parentName: Chef_grp
+      position: {x: -0.0006110767, y: 0.15262614, z: 0.00034867457}
+      rotation: {x: 0, y: 0, z: -0.021942683, w: 0.99975926}
+      scale: {x: 0.15691262, y: 0.15691262, z: 0.15691262}
+    - name: ChefHat_T
+      parentName: ChefHat
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CAP RIM
+      parentName: ChefHat_T
+      position: {x: -0.0061919903, y: -0.0056885025, z: 1.323489e-25}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: CAP TOP
+      parentName: ChefHat_T
+      position: {x: -0.0061919903, y: -0.00042562434, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: ApronFront
+      parentName: Chef_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

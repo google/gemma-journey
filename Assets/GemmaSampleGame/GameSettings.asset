@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016ad32b5e56bff449f8133517309200, type: 3}
+  m_Name: GameSettings
+  m_EditorClassIdentifier: 
+  privacyPolicyUrl: https://policies.google.com/privacy
+  termsOfUseUrl: https://policies.google.com/terms
+  learnMoreUrl: https://ai.google.dev/gdc
+  licenseUrl: https://goo.gle/gemma-game-demo-license

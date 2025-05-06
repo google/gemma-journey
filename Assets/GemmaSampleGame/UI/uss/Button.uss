@@ -1,0 +1,146 @@
+.primaryButton {
+    width: 200px;
+    height: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: rgba(255, 255, 255, 0);
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 16px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    background-image: url("project://database/Assets/GemmaSampleGame/UI/assets/gradient.png?fileID=2800000&guid=e656414b47741a94d9b747f0861a1356&type=3#gradient");
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    border-left-color: rgba(149, 149, 149, 0);
+    border-right-color: rgba(149, 149, 149, 0);
+    border-top-color: rgba(149, 149, 149, 0);
+    border-bottom-color: rgba(149, 149, 149, 0);
+    justify-content: center;
+    align-content: center;
+    font-size: 16px;
+    color: rgb(240, 243, 248);
+    -unity-font-style: bold;
+}
+
+.primaryButton:hover {
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.51);
+}
+
+.primaryButton:active #icon {
+    -unity-background-image-tint-color: rgb(31, 77, 238);
+}
+
+.primaryButton:active #label {
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    color: rgb(31, 77, 238);
+}
+
+.primaryButton:active {
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    color: rgb(31, 77, 238);
+}
+
+.secondaryButton {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    background-color: rgb(31, 37, 51);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    color: rgb(95, 99, 104);
+    font-size: 16px;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.secondaryButton:hover {
+    background-color: rgb(49, 58, 80);
+}
+
+.secondaryButton:active {
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    color: rgb(31, 77, 238);
+}
+
+.textButton {
+    width: 150px;
+    height: 60px;
+    background-color: rgba(31, 37, 51, 0);
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    -unity-font-style: bold;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.textButton:hover #icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background-size: 110% 110%;
+}
+
+.textButton:hover #label {
+    font-size: 18px;
+}
+
+.textButton:hover {
+    font-size: 16px;
+    -unity-font-style: bold;
+}
+
+.textButton:active #icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background-size: 100% 100%;
+}
+
+.textButton:active #label {
+    font-size: 16px;
+}
+
+.textButton:active {
+    font-size: 16px;
+}

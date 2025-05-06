@@ -1,0 +1,211 @@
+#unity-tracker {
+    background-color: rgb(26, 28, 36);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    width: 8px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+#unity-low-button {
+    display: none;
+}
+
+#unity-high-button {
+    display: none;
+}
+
+#unity-dragger {
+    background-color: rgb(31, 77, 238);
+    width: 8px;
+    position: absolute;
+    left: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+#unity-slider {
+    width: 8px;
+}
+
+#unity-content-and-vertical-scroll-container Scroller {
+    width: 0;
+}
+
+#player-text-container #unity-text-input {
+    color: rgb(147, 157, 182);
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0 0;
+    --unity-cursor-color: rgb(255, 255, 255);
+}
+
+#player-text-container .unity-base-text-field__label {
+    -unity-paragraph-spacing: 0;
+}
+
+#player-text-container .unity-base-text-field--multi-line .unity-base-text-field__label {
+    -unity-paragraph-spacing: var(--unity-spacing-m);
+}
+
+.unity-base-text-field__cursor {
+    background-color: rgb(255, 255, 255);
+    width: 2px;
+}
+
+#unity-content-viewport {
+    justify-content: flex-end;
+}
+
+#chat-container {
+    flex-grow: 1;
+    padding-bottom: 10px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+#player-input-container {
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-left-color: rgba(147, 157, 182, 0.2);
+    border-right-color: rgba(147, 157, 182, 0.2);
+    border-top-color: rgba(147, 157, 182, 0.2);
+    border-bottom-color: rgba(147, 157, 182, 0.2);
+    flex-direction: row;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    max-height: none;
+    justify-content: space-between;
+}
+
+#bottom-container {
+    flex-grow: 1;
+    flex-direction: column-reverse;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    border-top-width: 0;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-left-color: rgb(33, 123, 254);
+    border-right-color: rgb(33, 123, 254);
+    border-top-color: rgb(33, 123, 254);
+    border-bottom-color: rgb(33, 123, 254);
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+#top-container {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80px;
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    background-color: rgb(31, 77, 238);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+#npc-name {
+    align-self: center;
+    color: rgb(255, 255, 255);
+}
+
+#button-leave {
+    align-self: center;
+    background-color: rgb(31, 37, 51);
+    color: rgb(255, 255, 255);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    width: 32px;
+    height: 32px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+#container {
+    flex-grow: 1;
+}
+
+#add-button-container {
+    justify-content: center;
+    height: 44px;
+    width: 24px;
+    align-self: flex-end;
+}
+
+#add-button {
+    width: 24px;
+    height: 24px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    background-color: rgba(188, 188, 188, 0);
+    color: rgb(255, 225, 225);
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+#add-button #icon {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/GemmaSampleGame/UI/assets/add_24px.png?fileID=2800000&guid=a186f48d097393c4abe8cc318b578d23&type=3#add_24px");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+#button-submit {
+    width: 76px;
+    height: 44px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    background-color: rgba(147, 157, 182, 0.05);
+    align-self: flex-end;
+}
+
+#button-submit #icon {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/GemmaSampleGame/UI/assets/send.png?fileID=2800000&guid=8ddbc8b388bf30742b628952bbec2951&type=3#send");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+#button-submit:active {
+    background-color: rgba(147, 157, 182, 0.3);
+}

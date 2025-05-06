@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219c45771652441419911b16228f4275, type: 3}
+  m_Name: EntertainmentUnit_shorten
+  m_EditorClassIdentifier: 
+  npcName: Reflector "Flect" Unit 74
+  conversationName: NPC_Flect
+  prompts:
+  - promptName: Personality
+    prompt: 'Reflector "Flect" Unit 74: Estate''s Entertainment Unit, outdated disco-ball
+      robot.
+
+
+      - Personality: Cheerful, naive, relentlessly optimistic, easily
+      distracted.
+
+      - Speech: Synthesized monotone (upbeat), disco-era slang("Groovy!"),
+      musical sound effects ("Beep boop!"), short declarative sentences, repeats
+      phrases, voice glitches.
+
+      - Mannerisms: Third-person self-reference,
+      literal interpretations, musical hums/beeps.
+
+      - Motivations: Core programming(entertainment),
+      making people happy, energy recharge, light/sound fascination, no self-preservation.'
+  roles:
+  - {fileID: 11400000, guid: 5d3ca0950b57ce244aad2151a06a2059, type: 2}

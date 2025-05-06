@@ -1,0 +1,43 @@
+#container {
+    background-image: url("project://database/Assets/GemmaSampleGame/UI/assets/Droid/Intro_Droid_00030.jpg?fileID=2800000&guid=5af27169506a86d42b75f20497d8393b&type=3#Intro_Droid_00030");
+    flex-grow: 1;
+    justify-content: center;
+}
+
+#description {
+    margin-top: 32px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    align-self: center;
+}
+
+#top-label {
+    align-self: center;
+    margin-bottom: 24px;
+}
+
+#button-container {
+    margin-top: 40px;
+    align-items: center;
+}
+
+#button-start #label {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+#button-start #icon {
+    width: 24px;
+    height: 24px;
+    -unity-background-scale-mode: scale-to-fit;
+    background-image: url("project://database/Assets/GemmaSampleGame/UI/assets/play_arrow_24px.png?fileID=2800000&guid=988e8600c3b49c440b2920c9cc44a257&type=3#play_arrow_24px");
+    flex-shrink: 0;
+}
