@@ -30,7 +30,24 @@ jobs:
           restore-keys: |
             Library-
 
-      # Download Gemma Model from Kaggle (No extraction yet)
+      # Unity Builder
+      - name: Build project
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          targetPlatform: StandaloneWindows64
+          buildName: GemmaJourney # Name of the executable
+
+      # Output Build Path
+      - name: Get Build Output Path
+        id: build_path
+        run: echo "path=$(ls -d build/StandaloneWindows64/* | head -n 1)" >> $GITHUB_OUTPUT
+
+      # Download Gemma Model from Kaggle (Moved After Build)
       - name: Download Gemma Model
         run: |
           echo "Installing Kaggle CLI..."
@@ -51,23 +68,6 @@ jobs:
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
 
-      # Unity Builder
-      - name: Build project
-        uses: game-ci/unity-builder@v4
-        env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-        with:
-          targetPlatform: StandaloneWindows64
-          buildName: GemmaJourney # Name of the executable
-
-      # Output Build Path
-      - name: Get Build Output Path
-        id: build_path
-        run: echo "path=$(ls -d build/StandaloneWindows64/* | head -n 1)" >> $GITHUB_OUTPUT
-
       # Extract Gemma Model into Build Output
       - name: Extract Gemma Model into Build Output
         run: |
@@ -78,8 +78,8 @@ jobs:
           if [ -f "gemma-3.tar.gz" ]; then
             tar -xzf gemma-3.tar.gz -C "$TARGET_DIR"
             echo "Extraction complete."
-            # Optional: Remove the tar.gz file after extraction
-            # rm gemma-3.tar.gz
+            # Remove the tar.gz file after extraction
+            rm gemma-3.tar.gz
           else
             echo "Error: Could not find downloaded model file gemma-3.tar.gz for extraction."
             exit 1
