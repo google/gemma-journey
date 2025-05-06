@@ -77,11 +77,11 @@ jobs:
 
           echo "Extracting gemma-3.tar.gz into $FINAL_TARGET_DIR..."
           if [ -f "gemma-3.tar.gz" ]; then
-            tar -xzf gemma-3.tar.gz -C "$FINAL_TARGET_DIR"
-            rm *.tar.gz
+            sudo chmod -R 755 "$FINAL_TARGET_DIR"
+            sudo tar -xzf gemma-3.tar.gz -C "$FINAL_TARGET_DIR" # Added sudo here
+            rm *.tar.gz # Keep rm as is, should have permission in current dir
             echo "Extraction complete."
             echo "Setting permissions on $FINAL_TARGET_DIR..."
-            sudo chmod -R 755 "$FINAL_TARGET_DIR"
             echo "Permissions set."
           else
             echo "Error: Could not find downloaded model file gemma-3.tar.gz for extraction."
