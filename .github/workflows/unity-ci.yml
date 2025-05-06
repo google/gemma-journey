@@ -13,7 +13,7 @@ on:
 jobs:
   build-windows: # Renamed job
     name: Build Unity Project (Windows) # Updated name
-    runs-on: ubuntu-latest # Unity builds are generally faster on Linux runners
+    runs-on: ubuntu-22.04-32core
     steps:
       # Checkout
       - name: Checkout repository
