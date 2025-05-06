@@ -106,11 +106,28 @@ jobs:
       - name: Create 7z Multi-Volume Archive
         run: |
           ARCHIVE_NAME="windows-build"
-          # Create the 7z archive, split into 1900MB volumes
-          7z a -v1900m "${ARCHIVE_NAME}.7z" "${{ steps.build_path.outputs.path }}"
+          BUILD_OUTPUT_DIR="${{ steps.build_path.outputs.path }}"
+
+          echo "Archiving contents of: $BUILD_OUTPUT_DIR"
+          echo "Files to be archived:"
+          # List all files and directories that will be archived for debugging
+          find "$BUILD_OUTPUT_DIR" -print
           
-          echo "Created multi-volume 7z archive:"
-          ls -lh ${ARCHIVE_NAME}.7z.*
+          echo "Changing to directory: $BUILD_OUTPUT_DIR"
+          cd "$BUILD_OUTPUT_DIR"
+          
+          # Create the 7z archive from the contents of the current directory (.)
+          # The archive will be created in the original GITHUB_WORKSPACE
+          # So we use an absolute path for the archive name
+          echo "Creating multi-volume 7z archive ${GITHUB_WORKSPACE}/${ARCHIVE_NAME}.7z ..."
+          7z a -v1900m "${GITHUB_WORKSPACE}/${ARCHIVE_NAME}.7z" .
+          
+          echo "Archive creation complete."
+          echo "Listing created archive parts in ${GITHUB_WORKSPACE}:"
+          ls -lh "${GITHUB_WORKSPACE}/${ARCHIVE_NAME}.7z."*
+          
+          # Change back to the original directory (optional, but good practice)
+          cd "${GITHUB_WORKSPACE}"
 
       # Upload Artifact
       # This step might need adjustment if we only want to upload for releases,
@@ -120,14 +137,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-windows-7z-parts
-          path: windows-build.7z.*
+          path: "${GITHUB_WORKSPACE}/windows-build.7z.*" # Ensure we use the correct path
 
       # Create Release and Upload
       - name: Create Release
         if: startsWith(github.ref, 'refs/tags/v') # Only run for tags starting with 'v'
         uses: softprops/action-gh-release@v1
         with:
-          files: windows-build.7z.* # Uploads all parts: windows-build.7z.001, .002, etc.
+          files: "${GITHUB_WORKSPACE}/windows-build.7z.*" # Ensure we use the correct path
           body: |
             ## Windows Build (Multi-Volume 7-Zip Archive)
 
