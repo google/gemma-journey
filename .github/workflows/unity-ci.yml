@@ -73,7 +73,7 @@ jobs:
         run: |
           FINAL_TARGET_DIR="${{ steps.build_path.outputs.path }}/GemmaJourney_Data/StreamingAssets/gemma-3.0-4b"
 
-          mkdir -p "$FINAL_TARGET_DIR"
+          sudo mkdir -p "$FINAL_TARGET_DIR"
 
           echo "Extracting gemma-3.tar.gz into $FINAL_TARGET_DIR..."
           if [ -f "gemma-3.tar.gz" ]; then
