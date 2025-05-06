@@ -71,32 +71,22 @@ jobs:
       # Extract and Copy Gemma Model into Build Output using Sudo
       - name: Extract and Copy Gemma Model into Build Output
         run: |
-          TEMP_EXTRACT_DIR="temp_gemma_extract"
           FINAL_TARGET_DIR="${{ steps.build_path.outputs.path }}/GemmaJourney_Data/StreamingAssets/gemma-3.0-4b"
 
-          echo "Creating temporary extraction directory $TEMP_EXTRACT_DIR..."
-          mkdir -p "$TEMP_EXTRACT_DIR"
+          mkdir -p "$FINAL_TARGET_DIR"
 
-          echo "Extracting gemma-3.tar.gz into $TEMP_EXTRACT_DIR..."
+          echo "Extracting gemma-3.tar.gz into $FINAL_TARGET_DIR..."
           if [ -f "gemma-3.tar.gz" ]; then
-            tar -xzf gemma-3.tar.gz -C "$TEMP_EXTRACT_DIR"
-            echo "Extraction to temporary directory complete."
+            tar -xzf gemma-3.tar.gz -C "$FINAL_TARGET_DIR"
+            rm *.tar.gz
+            echo "Extraction complete."
+            echo "Setting permissions on $FINAL_TARGET_DIR..."
+            sudo chmod -R 755 "$FINAL_TARGET_DIR"
+            echo "Permissions set."
           else
             echo "Error: Could not find downloaded model file gemma-3.tar.gz for extraction."
             exit 1
           fi
-
-          echo "Creating final target directory $FINAL_TARGET_DIR using sudo..."
-          sudo mkdir -p "$FINAL_TARGET_DIR"
-
-          echo "Copying extracted files from $TEMP_EXTRACT_DIR to $FINAL_TARGET_DIR using sudo..."
-          # Use sudo to copy, handle hidden files too
-          sudo cp -rT "$TEMP_EXTRACT_DIR/" "$FINAL_TARGET_DIR/"
-          # Alternative if -T is not available: sudo cp -r "$TEMP_EXTRACT_DIR/." "$FINAL_TARGET_DIR/"
-
-          echo "Cleaning up temporary directory and archive..."
-          rm -rf "$TEMP_EXTRACT_DIR"
-          rm gemma-3.tar.gz
 
           echo "Model successfully placed in build output."
         env:
