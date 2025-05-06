@@ -30,8 +30,8 @@ jobs:
           restore-keys: |
             Library-
 
-      # Download and Extract Gemma Model from Kaggle
-      - name: Download and Extract Gemma Model
+      # Download Gemma Model from Kaggle (No extraction yet)
+      - name: Download Gemma Model
         run: |
           echo "Installing Kaggle CLI..."
           pip install kaggle --upgrade
@@ -39,23 +39,14 @@ jobs:
           mkdir -p ~/.kaggle
           echo '{"username":"${{ secrets.KAGGLE_USERNAME }}","key":"${{ secrets.KAGGLE_KEY }}"}' > ~/.kaggle/kaggle.json
           chmod 600 ~/.kaggle/kaggle.json
-          echo "Creating target directory..."
-          mkdir -p Assets/StreamingAssets/gemma-3.0-4b
-          echo "Downloading Gemma model..."
+          echo "Downloading Gemma model (gemma-3.tar.gz)..."
           # Use the correct command structure including version number /1
           kaggle models instances versions download google/gemma-3/gemmaCpp/3.0-4b-it-sfp/1 -p . --quiet
-          echo "Extracting Gemma model (gemma-3.tar.gz)..."
-          mkdir -p Assets/StreamingAssets/gemma-3.0-4b
-          # Extract the downloaded tar.gz file
-          if [ -f "gemma-3.tar.gz" ]; then
-            tar -xzf gemma-3.tar.gz -C Assets/StreamingAssets/gemma-3.0-4b
-            # Optional: Remove the tar.gz file after extraction
-            # rm gemma-3.tar.gz
-          else
+          if [ ! -f "gemma-3.tar.gz" ]; then
             echo "Error: Could not find downloaded model file gemma-3.tar.gz."
             exit 1
           fi
-          echo "Model download and extraction complete."
+          echo "Model download complete."
         env:
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
@@ -76,6 +67,23 @@ jobs:
       - name: Get Build Output Path
         id: build_path
         run: echo "path=$(ls -d build/StandaloneWindows64/* | head -n 1)" >> $GITHUB_OUTPUT
+
+      # Extract Gemma Model into Build Output
+      - name: Extract Gemma Model into Build Output
+        run: |
+          echo "Creating target directory in build output..."
+          TARGET_DIR="${{ steps.build_path.outputs.path }}/GemmaJourney_Data/StreamingAssets/gemma-3.0-4b"
+          mkdir -p "$TARGET_DIR"
+          echo "Extracting gemma-3.tar.gz into $TARGET_DIR..."
+          if [ -f "gemma-3.tar.gz" ]; then
+            tar -xzf gemma-3.tar.gz -C "$TARGET_DIR"
+            echo "Extraction complete."
+            # Optional: Remove the tar.gz file after extraction
+            # rm gemma-3.tar.gz
+          else
+            echo "Error: Could not find downloaded model file gemma-3.tar.gz for extraction."
+            exit 1
+          fi
 
       # Zip build
       - name: Zip Build Artifact
