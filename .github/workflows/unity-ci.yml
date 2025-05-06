@@ -30,6 +30,36 @@ jobs:
           restore-keys: |
             Library-
 
+      # Download and Extract Gemma Model from Kaggle
+      - name: Download and Extract Gemma Model
+        run: |
+          echo "Installing Kaggle CLI..."
+          pip install kaggle --upgrade
+          echo "Configuring Kaggle credentials..."
+          mkdir -p ~/.kaggle
+          echo '{"username":"${{ secrets.KAGGLE_USERNAME }}","key":"${{ secrets.KAGGLE_KEY }}"}' > ~/.kaggle/kaggle.json
+          chmod 600 ~/.kaggle/kaggle.json
+          echo "Creating target directory..."
+          mkdir -p Assets/StreamingAssets/gemma-3.0-4b
+          echo "Downloading Gemma model..."
+          # Use the correct command structure including version number /1
+          kaggle models instances versions download google/gemma-3/gemmaCpp/3.0-4b-it-sfp/1 -p . --quiet
+          echo "Extracting Gemma model (gemma-3.tar.gz)..."
+          mkdir -p Assets/StreamingAssets/gemma-3.0-4b
+          # Extract the downloaded tar.gz file
+          if [ -f "gemma-3.tar.gz" ]; then
+            tar -xzf gemma-3.tar.gz -C Assets/StreamingAssets/gemma-3.0-4b
+            # Optional: Remove the tar.gz file after extraction
+            # rm gemma-3.tar.gz
+          else
+            echo "Error: Could not find downloaded model file gemma-3.tar.gz."
+            exit 1
+          fi
+          echo "Model download and extraction complete."
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+
       # Unity Builder
       - name: Build project
         uses: game-ci/unity-builder@v4
