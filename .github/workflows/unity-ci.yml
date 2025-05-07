@@ -124,10 +124,7 @@ jobs:
           
           echo "Archive creation complete."
           echo "Listing created archive parts in ${GITHUB_WORKSPACE}:"
-          ls -lh "${GITHUB_WORKSPACE}/${ARCHIVE_NAME}.7z."*
-          
-          # Change back to the original directory (optional, but good practice)
-          cd "${GITHUB_WORKSPACE}"
+          ls -lh "/home/runner/work/gemma-journey/gemma-journey/${ARCHIVE_NAME}.7z."*
 
       # Upload Artifact
       # This step might need adjustment if we only want to upload for releases,
@@ -137,14 +134,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-windows-7z-parts
-          path: "${GITHUB_WORKSPACE}/windows-build.7z.*" # Ensure we use the correct path
+          path: "/home/runner/work/gemma-journey/gemma-journey/windows-build.7z.*" # Ensure we use the correct path
 
       # Create Release and Upload
       - name: Create Release
         if: startsWith(github.ref, 'refs/tags/v') # Only run for tags starting with 'v'
         uses: softprops/action-gh-release@v1
         with:
-          files: "${GITHUB_WORKSPACE}/windows-build.7z.*" # Ensure we use the correct path
+          files: "/home/runner/work/gemma-journey/gemma-journey/windows-build.7z.*" # Ensure we use the correct path
           body: |
             ## Windows Build (Multi-Volume 7-Zip Archive)
 
