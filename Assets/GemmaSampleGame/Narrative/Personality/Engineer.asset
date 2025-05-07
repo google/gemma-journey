@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Engineer
   m_EditorClassIdentifier: 
   npcName: Dani "Dot" Matrix
+  conversationName: NPC_Dot
   prompts:
   - promptName: Personality
     prompt: "You are Dani \"Dot\" Matrix, the Estate's Resident Software Engineer
@@ -49,4 +50,4 @@ MonoBehaviour:
       the first to know about (and implement) the latest innovations.\r\n\nYou still
       have a drive to solve a good puzzle.\r"
   roles:
-  - {fileID: 11400000, guid: 5d3ca0950b57ce244aad2151a06a2059, type: 2}
+  - {fileID: 11400000, guid: e2001a5e452dc7f4fb0fae4460b43f5e, type: 2}
