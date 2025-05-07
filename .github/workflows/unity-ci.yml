@@ -2,7 +2,6 @@ name: Unity CI/CD
 
 on:
   push:
-    branches: [ main ] # Trigger on pushes to the main branch
     tags:
       - 'buildtest'
       - 'v*.*.*' # Trigger on version tags like v1.0.0
