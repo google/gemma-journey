@@ -51,7 +51,7 @@ jobs:
       # Output Build Path
       - name: Get Build Output Path
         id: build_path
-        run: echo "path=$(ls -d build/StandaloneWindows64/* | head -n 1)" >> $GITHUB_OUTPUT
+        run: echo "path=$(ls -d build/* | head -n 1)" >> $GITHUB_OUTPUT
 
       # Download Gemma Model from Kaggle (Moved After Build)
       - name: Download Gemma Model
