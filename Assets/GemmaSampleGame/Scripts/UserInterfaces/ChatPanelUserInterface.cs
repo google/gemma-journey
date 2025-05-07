@@ -9,6 +9,7 @@
  * between UI states.
  */
 using Cysharp.Threading.Tasks;
+using LogicUI.FancyTextRendering;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -111,6 +112,9 @@ namespace GoogleDeepMind.GemmaSampleGame.UI
         /** Holder for UI transition effects and animations */
         [SerializeField]
         private UI.TransitionHolder _transitionHolder;
+
+        [SerializeField]
+        private MarkdownParser _markdownParser;
 
         /** Whether the thinking animation has been started */
         private bool _startThinking = false;
@@ -267,7 +271,7 @@ namespace GoogleDeepMind.GemmaSampleGame.UI
                 Label label = latestChatBox.Q<Label>("label");
                 if (label != null)
                 {
-                    label.text = content;
+                    label.text = _markdownParser.ToRichText(content);
                 }
                 ScrollToBottom();
             }
@@ -292,7 +296,7 @@ namespace GoogleDeepMind.GemmaSampleGame.UI
                         Debug.Log("Add Player");
                         templateContainer = playerChatTemplate.Instantiate();
                         Label label = templateContainer.Q<Label>("label");
-                        label.text = content;
+                        label.text = _markdownParser.ToRichText(content);
                         break;
                     }
                 case ChatType.Npc:
@@ -300,7 +304,7 @@ namespace GoogleDeepMind.GemmaSampleGame.UI
                         Debug.Log("Add Npc");
                         templateContainer = npcChatTemplate.Instantiate();
                         Label label = templateContainer.Q<Label>("label");
-                        label.text = content;
+                        label.text = _markdownParser.ToRichText(content);
                         break;
                     }
             }
