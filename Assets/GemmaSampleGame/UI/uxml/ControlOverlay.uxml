@@ -1,7 +1,7 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/uss/TextStyle.uss?fileID=7433441132597879392&amp;guid=7068a08247347a34c83208940f624e99&amp;type=3#TextStyle" />
-    <Style src="project://database/Assets/UI/uss/Button.uss?fileID=7433441132597879392&amp;guid=7aa0449acf503f94d8f4c4deec340154&amp;type=3#Button" />
-    <Style src="project://database/Assets/UI/uss/ControlOverlay.uss?fileID=7433441132597879392&amp;guid=11c24e30de7450245b843c0dafb584af&amp;type=3#ControlOverlay" />
+    <Style src="project://database/Assets/GemmaSampleGame/UI/uss/TextStyle.uss?fileID=7433441132597879392&amp;guid=7068a08247347a34c83208940f624e99&amp;type=3#TextStyle" />
+    <Style src="project://database/Assets/GemmaSampleGame/UI/uss/Button.uss?fileID=7433441132597879392&amp;guid=7aa0449acf503f94d8f4c4deec340154&amp;type=3#Button" />
+    <Style src="project://database/Assets/GemmaSampleGame/UI/uss/ControlOverlay.uss?fileID=7433441132597879392&amp;guid=11c24e30de7450245b843c0dafb584af&amp;type=3#ControlOverlay" />
     <engine:VisualElement name="container" picking-mode="Ignore">
         <engine:VisualElement enabled="true" picking-mode="Ignore" name="top-control">
             <engine:Button text="Exit game" name="button-exit" class="secondaryButton" />

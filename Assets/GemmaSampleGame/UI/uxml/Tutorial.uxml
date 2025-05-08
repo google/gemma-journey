@@ -1,7 +1,7 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/uss/TextStyle.uss?fileID=7433441132597879392&amp;guid=7068a08247347a34c83208940f624e99&amp;type=3#TextStyle" />
-    <Style src="project://database/Assets/UI/uss/Button.uss?fileID=7433441132597879392&amp;guid=7aa0449acf503f94d8f4c4deec340154&amp;type=3#Button" />
-    <Style src="project://database/Assets/UI/uss/Tutorial.uss?fileID=7433441132597879392&amp;guid=fc4573d595ef9c04c8fa322dfda1c797&amp;type=3#Tutorial" />
+    <Style src="project://database/Assets/GemmaSampleGame/UI/uss/TextStyle.uss?fileID=7433441132597879392&amp;guid=7068a08247347a34c83208940f624e99&amp;type=3#TextStyle" />
+    <Style src="project://database/Assets/GemmaSampleGame/UI/uss/Button.uss?fileID=7433441132597879392&amp;guid=7aa0449acf503f94d8f4c4deec340154&amp;type=3#Button" />
+    <Style src="project://database/Assets/GemmaSampleGame/UI/uss/Tutorial.uss?fileID=7433441132597879392&amp;guid=fc4573d595ef9c04c8fa322dfda1c797&amp;type=3#Tutorial" />
     <engine:VisualElement name="container">
         <engine:VisualElement name="modal">
             <engine:VisualElement name="left-container">

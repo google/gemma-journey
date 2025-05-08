@@ -1,6 +1,6 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/uss/TextStyle.uss?fileID=7433441132597879392&amp;guid=7068a08247347a34c83208940f624e99&amp;type=3#TextStyle" />
-    <Style src="project://database/Assets/UI/uss/PlayerChatbox.uss?fileID=7433441132597879392&amp;guid=dcadcc16853c8f741a1311c6f7ad134f&amp;type=3#PlayerChatbox" />
+    <Style src="project://database/Assets/GemmaSampleGame/UI/uss/TextStyle.uss?fileID=7433441132597879392&amp;guid=7068a08247347a34c83208940f624e99&amp;type=3#TextStyle" />
+    <Style src="project://database/Assets/GemmaSampleGame/UI/uss/PlayerChatbox.uss?fileID=7433441132597879392&amp;guid=dcadcc16853c8f741a1311c6f7ad134f&amp;type=3#PlayerChatbox" />
     <engine:VisualElement name="container">
         <engine:Label text="Donec vehicula fermentum arcu, vitae dignissim felis tincidunt varius. Cras neque metus, blandit mollis a" name="label" class="description" />
     </engine:VisualElement>

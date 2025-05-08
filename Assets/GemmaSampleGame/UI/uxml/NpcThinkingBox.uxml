@@ -1,5 +1,5 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/uss/NpcThinkingBox.uss?fileID=7433441132597879392&amp;guid=14601fe61077ac04592456905cf8fbc2&amp;type=3#NpcThinkingBox" />
+    <Style src="project://database/Assets/GemmaSampleGame/UI/uss/NpcThinkingBox.uss?fileID=7433441132597879392&amp;guid=14601fe61077ac04592456905cf8fbc2&amp;type=3#NpcThinkingBox" />
     <engine:VisualElement name="dot-container">
         <engine:VisualElement style="flex-direction: row; width: 50px; height: 10px; justify-content: space-between;">
             <engine:VisualElement name="first-dot" class="circle" />

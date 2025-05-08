@@ -1,19 +1,21 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/uss/TextStyle.uss?fileID=7433441132597879392&amp;guid=7068a08247347a34c83208940f624e99&amp;type=3#TextStyle" />
-    <Style src="project://database/Assets/UI/uss/Button.uss?fileID=7433441132597879392&amp;guid=7aa0449acf503f94d8f4c4deec340154&amp;type=3#Button" />
-    <Style src="project://database/Assets/UI/uss/MainMenu.uss?fileID=7433441132597879392&amp;guid=c822fdf8d60e7b94b95217d8a6e0827e&amp;type=3#MainMenu" />
-    <Style src="project://database/Assets/UI/uss/EndGame.uss?fileID=7433441132597879392&amp;guid=46b7bf26abab341479c6d250099543bd&amp;type=3#EndGame" />
+    <Style src="project://database/Assets/GemmaSampleGame/UI/uss/TextStyle.uss?fileID=7433441132597879392&amp;guid=7068a08247347a34c83208940f624e99&amp;type=3#TextStyle" />
+    <Style src="project://database/Assets/GemmaSampleGame/UI/uss/Button.uss?fileID=7433441132597879392&amp;guid=7aa0449acf503f94d8f4c4deec340154&amp;type=3#Button" />
+    <Style src="project://database/Assets/GemmaSampleGame/UI/uss/MainMenu.uss?fileID=7433441132597879392&amp;guid=c822fdf8d60e7b94b95217d8a6e0827e&amp;type=3#MainMenu" />
+    <!--<Style src="project://database/Assets/GemmaSampleGame/UI/uss/EndGame.uss?fileID=7433441132597879392&amp;guid=46b7bf26abab341479c6d250099543bd&amp;type=3#EndGame" />-->
     <engine:VisualElement name="container">
         <engine:VisualElement>
             <engine:Label text="Gemma 3 Unity Game Demo" name="top-label" class="description" />
-            <engine:VisualElement style="background-image: url(&quot;project://database/Assets/UI/assets/Thanks%20for%20playing.png?fileID=2800000&amp;guid=22275bc83d0edd240a7d04c1f392a3cf&amp;type=3#Thanks for playing&quot;); height: 96px; -unity-background-scale-mode: scale-to-fit;" />
+            <engine:VisualElement style="background-image: url(&quot;project://database/Assets/GemmaSampleGame/UI/assets/Thanks%20for%20playing.png?fileID=2800000&amp;guid=22275bc83d0edd240a7d04c1f392a3cf&amp;type=3#Thanks for playing&quot;); height: 96px; -unity-background-scale-mode: scale-to-fit;" />
             <engine:Label text="Interact with lifelike NPCs with on-device AI dialogue powered by Gemma 3" name="description" class="description" />
             <engine:VisualElement name="button-container">
                 <engine:Button name="learn-more-button" text="Learn more" class="primaryButton" />
+                <!--
                 <engine:Button name="play-again-button" class="textButton">
                     <engine:Label text="Play again" name="label" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
-                    <engine:VisualElement name="icon" style="width: 24px; height: 24px; flex-shrink: 0; background-image: url(&quot;project://database/Assets/UI/assets/refresh.png?fileID=2800000&amp;guid=f8ea54dd85aca1f40a5d0f9457c538cd&amp;type=3#refresh&quot;);" />
+                    <engine:VisualElement name="icon" style="width: 24px; height: 24px; flex-shrink: 0; background-image: url(&quot;project://database/Assets/GemmaSampleGame/UI/assets/refresh.png?fileID=2800000&amp;guid=f8ea54dd85aca1f40a5d0f9457c538cd&amp;type=3#refresh&quot;);" />
                 </engine:Button>
+                -->
             </engine:VisualElement>
         </engine:VisualElement>
     </engine:VisualElement>
